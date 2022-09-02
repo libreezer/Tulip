@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Tulip" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/MainColor</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeWithStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/MainColor</item>
+        <item name="colorPrimaryDark">@color/MainColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

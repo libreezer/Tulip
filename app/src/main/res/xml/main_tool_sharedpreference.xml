@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="查看软件"
+        android:icon="@drawable/ic_baseline_android_24">
+        <intent android:targetPackage="breeze.app.tulip"
+            android:targetClass="breeze.app.tulip.activity.AppCenterActivity"/>
+    </Preference>
+
+    <Preference android:title="检查更新"
+        android:key="prf_main_check_update"
+        android:icon="@drawable/ic_baseline_cloud_upload_24"/>
+
+    <Preference android:icon="@drawable/ic_baseline_looks_24"
+        android:title="查看路径">
+        <intent android:targetPackage="breeze.app.tulip"
+            android:targetClass="breeze.app.tulip.activity.LookPathActivity"/>
+    </Preference>
+
+    <Preference android:icon="@drawable/ic_baseline_face_24"
+        android:title="高级版本">
+        <intent android:targetPackage="breeze.app.tulip"
+            android:targetClass="breeze.app.tulip.activity.ProActivity"/>
+    </Preference>
+
+    <Preference android:icon="@drawable/ic_baseline_qq_24"
+        android:key="joinQQ"
+        android:title="加入官群"/>
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tulip</string>
+    <string name="xposed_des">本模块用于修改软件使用android原生方法获取的文件路径，对软件文件储存重定向。</string>
+    <string name="pay_about">说明：支付方式为微信支付，在支付过程中请勿关闭应用，否则可能会支付失败。
+        本应用也是由个人开发而成，需要对后台之类的进行维护，如果您觉得好用可以购买高级版，享受更多功能(就当请开发者喝瓶可乐)，感谢您的支持，在今后更新过程中也会有更多的功能。
+        在支付成功后会生成Token作为用户凭证，即使更换手机也可以通过Token进行激活，请用户妥善保存Token。</string>
+</resources>

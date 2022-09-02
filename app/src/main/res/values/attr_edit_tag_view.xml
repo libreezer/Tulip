@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppEditLayout">
+        <attr name="android:textColor" format="color"/>
+        <attr name="inputTag" format="string"/>
+        <attr name="methodName" format="string"/>
+        <attr name="parentClass" format="string"/>
+        <attr name="android:enabled" format="boolean"/>
+    </declare-styleable>
+</resources>

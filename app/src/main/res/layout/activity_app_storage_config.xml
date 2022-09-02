@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.AppStorageConfigActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:id="@+id/app_config_appname"
+            android:text="ApplicationName"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxWidth="150dp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:onClick="log"
+            android:id="@+id/app_config_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="查看日志"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:id="@+id/app_config_all_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                正式内容-->
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_ExternalStorageDirectory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="公共目录路径"
+                    app:parentClass="Environment"
+                    app:methodName="getExternalDirs" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_DownloadCacheDirectory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="下载缓存路径"
+                    app:parentClass="Environment"
+                    app:methodName="getDownloadCacheDirectory" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_ObbDir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="obb目录路径"
+                    app:methodName="getObbDir"
+                    app:parentClass="ContextWrapper" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_ExternalCacheDir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="沙盒缓存路径"
+                    app:methodName="getExternalCacheDir"
+                    app:parentClass="ContextWrapper" />
+
+                <!-- 高级功能 -->
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_getRootDirectory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="系统目录路径"
+                    app:parentClass="Environment"
+                    app:methodName="getRootDirectory" />
+
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_getDataDirectory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="数据目录路径"
+                    app:parentClass="Environment"
+                    app:methodName="getDataDirectory" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_DataDir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="私有目录路径"
+                    app:methodName="getDataDir"
+                    app:parentClass="ContextWrapper" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_getDataDir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="私有缓存路径"
+                    app:methodName="getCacheDir"
+                    app:parentClass="ContextWrapper" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_getFilesDir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="私有文件路径"
+                    app:methodName="getFilesDir"
+                    app:parentClass="ContextWrapper" />
+
+                <breeze.app.tulip.widget.AppEditLayout
+                    android:id="@+id/app_config_getCodeCacheDir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fontColor"
+                    app:inputTag="代码缓存路径"
+                    app:methodName="getCodeCacheDir"
+                    app:parentClass="ContextWrapper" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_marginEnd="10dp"
+                        android:onClick="delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="删除"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+                    <Button
+                        android:onClick="save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="保存"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
